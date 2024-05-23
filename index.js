@@ -179,10 +179,6 @@ resetButton.addEventListener('click', () => {
     }
 });
 
-
-
-
-
 helpButton.addEventListener('click', () => {
     instructionsModal.style.display = 'flex';
 });

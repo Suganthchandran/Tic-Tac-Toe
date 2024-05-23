@@ -72,17 +72,20 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px); /* Blur effect */
 }
+
 
 .form-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 20%;
 }
 
 .form-content input, .form-content select {
@@ -172,4 +175,31 @@ h2,label{
 
 .modal-content button:hover {
     background-color: #35509a;
+}
+
+
+.score-table {
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translateY(-50%);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.score-table table {
+    width: 230px;
+    border-collapse: collapse;
+}
+
+.score-table th, .score-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    color: black;
+}
+
+.score-table th {
+    background-color: #f2f2f2;
 }
