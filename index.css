@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #2f4992, #3c6de9);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s;
+    color: black;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.status, .scoreboard {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.score {
+    margin: 10px;
+}
+
+.reset, .help {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #2f4992;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.reset:hover, .help:hover {
+    background-color: #35509a;
+    color: #fff;
+}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 3px black;
+}
+
+.player-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-content input, .form-content select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+.winning-line {
+    position: absolute;
+    height: 4px;
+    background-color: red;
+    z-index: 10;
+    transform-origin: left center;
+    transition: transform 0.5s ease;
+}
+
+h2,label{
+    color:#35509a;
+    font-style: bold;
+}
+
+#start-game{
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #2f4992;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#start-game:hover{
+    background-color: #fff;
+    color: #35509a;
+    border: 3px solid #35509a;
+}
+
+#points-to-win{
+    text-decoration: none;
+    
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    color: #2f4992;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    background-color: #2f4992;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #35509a;
+}
