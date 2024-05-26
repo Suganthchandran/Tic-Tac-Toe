@@ -9,7 +9,6 @@
 <body>
     <h1>Tic Tac Toe</h1>
     
-    
     <div id="player-form" class="player-form">
         <div class="form-content">
             <h2>Enter Player Names</h2>
@@ -18,11 +17,14 @@
             <label for="player2">Player 2 :</label>
             <input type="text" id="player2" placeholder="Enter name" required>
             <label for="points-to-win">Points to Win:</label>
-            <select id="points-to-win">
-                <option value="1">1</option>
-                <option value="5">5</option>
-                <option value="10">10</option>
-            </select>
+            <input type="text" id="points-to-win" list="points-options" placeholder="Enter or select points">
+            <datalist id="points-options">
+                <option value="-- No Limit --"></option>
+                <option value="1"></option>
+                <option value="5"></option>
+                <option value="10"></option>
+            </datalist>
+
             <button id="start-game">Start Game</button>
         </div>
     </div>
@@ -49,7 +51,6 @@
         <button class="help" id="help">Help</button>
     </div>
 
-    <!-- Add modal for instructions -->
 <div id="instructions-modal" class="modal">
     <div class="modal-content">
         <h2>Instructions</h2>
@@ -68,7 +69,7 @@
 </div>
 
 
-    <!-- Add modal for end game dialog -->
+
     <div id="end-game-modal" class="modal">
         <div class="modal-content">
             <p>Do you want to play again?</p>
