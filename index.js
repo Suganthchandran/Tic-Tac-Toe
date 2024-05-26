@@ -118,19 +118,19 @@ function handleClick(event) {
             if (player1Score >= pointsToWin || player2Score >= pointsToWin) {
                 statusElement.textContent = `${result.winner === 'X' ? player1 : player2} wins the game!`;
                 isGameOver = true;
-                setTimeout(showEndGameModal, 2000); // Show modal after 2 seconds
+                setTimeout(showEndGameModal, 2000); 
                 return;
             } else {
                 isGameOver = true;
                 setTimeout(() => {
                     round++;
                     initGame();
-                }, 2000); // Reset the board after 2 seconds
+                }, 2000); 
                 return;
             }
         }
         isGameOver = true;
-        setTimeout(initGame, 2000); // Reset the board after 2 seconds
+        setTimeout(initGame, 2000); 
     } else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         statusElement.textContent = `Player ${currentPlayer}'s turn`;
